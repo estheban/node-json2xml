@@ -1,0 +1,12 @@
+{
+  "name": "json2xml",
+  "description": "JSON 2 XML Parser",
+  "version": "0.0.1",
+  "author": "Etienne Lachance <et@etiennelachance.com>",
+  "main": "./index.js",
+  "engines": { "node": ">= 0.1.98" },
+  "repository" : { 
+    "type" : "git",
+    "url"  : "https://estheban@github.com/estheban/node-json2xml.git"
+  },
+}
