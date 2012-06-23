@@ -15,7 +15,7 @@ install json2xml` which will download json2xml and all dependencies.
 Simple usage
 -----------
 
-    var sys = require('sys'),
+    var util = require('util'),
     var json2xml = require('json2xml');
 
     console.log(json2xml.toXml("firstXmlTag",jsonData));
