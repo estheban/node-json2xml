@@ -14,9 +14,21 @@ install json2xml` which will download json2xml and all dependencies.
 
 Simple usage
 -----------
-
-    var util = require('util'),
+    
     var json2xml = require('json2xml');
+    json2xml({a:1});
+    //<a>1</a>
+	    
 
-    console.log(json2xml.toXml("firstXmlTag",jsonData));
+Options
+-----------
 
+	add header:
+
+	json2xml({a:1}, { header:true });
+	//<?xml version="1.0" encoding="UTF-8"?><a>1</a>
+
+	add node attributes:
+
+	json2xml({a:1, attr:{b:2,c:3 }}, { attributes_key:'attr' });	
+	// <a b="2" c="3" >1</a>
