@@ -18,11 +18,15 @@ Simple usage
     var json2xml = require('json2xml');
 	json2xml(json, options);
 
-Options
+Options & Behaviour
 -----------
 	none:
 	json2xml({ a: 1 });
     //<a>1</a>
+
+    empty node:
+    json2xml({ a: '' });
+    //<a/>
 
 	add header:
 	json2xml({ a: 1 }, { header: true });

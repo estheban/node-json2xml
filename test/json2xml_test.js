@@ -32,7 +32,9 @@ exports['json2xml'] = {
     test.done();
   },
   'opts': function(test) {
-    test.expect(5);
+    test.expect(6);
+    test.equal(json2xml({a:''}),'<a/>');
+
     test.equal(json2xml({a:1}),'<a>1</a>');
     test.equal(json2xml([{a:1}, {b:2}]),'<a>1</a><b>2</b>');
     
