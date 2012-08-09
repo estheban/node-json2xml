@@ -1,13 +1,51 @@
 {
   "name": "json2xml",
-  "description": "JSON 2 XML Parser",
-  "keywords" : ["json","xml"],
-  "homepage" : "https://github.com/estheban/node-json2xml",
-  "version": "0.0.1",
-  "author": "Etienne Lachance <et@etiennelachance.com>",
-  "main": "./index.js",
-  "repository" : { 
-    "type" : "git",
-    "url"  : "https://estheban@github.com/estheban/node-json2xml.git"
-  }
+  "description": "Simple JavaScript Object to XML string converter.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/alanclarke/node-json2xml",
+  "author": {
+    "name": "Etienne Lachance",
+    "email": "et@etiennelachance.com"
+  },
+  "contributors": [
+    {
+      "name": "Alan Clarke",
+      "email": "hi@alz.so",
+      "url": "alz.so"
+    },
+    {
+      "name": "Ivo Georgiev",
+      "email": "ivo@linvo.org"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/estheban/node-json2xml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/estheban/node-json2xml/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/estheban/node-json2xml/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/json2xml",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.11"
+  },
+  "keywords": [],
+  "readme": "node-json2xml\n===========\n\nDescription\n-----------\n\nSimple JavaScript Object to XML string converter.\n\nInstallation\n------------\n\nSimplest way to install `json2xml` is to use [npm](http://npmjs.org), just `npm\ninstall json2xml` which will download json2xml and all dependencies.\n\nSimple usage\n-----------\n    \n    var json2xml = require('json2xml');\n    json2xml({a:1});\n    //<a>1</a>\n\t    \n\nOptions\n-----------\n\n\tadd header:\n\n\tjson2xml({a:1}, { header:true });\n\t//<?xml version=\"1.0\" encoding=\"UTF-8\"?><a>1</a>\n\n\tadd node attributes:\n\n\tjson2xml({a:1, attr:{b:2,c:3 }}, { attributes_key:'attr' });\t\n\t// <a b=\"2\" c=\"3\" >1</a>",
+  "_id": "json2xml@0.1.1",
+  "dist": {
+    "shasum": "03d51836b3b3e9a53980132e3a3d07c50bb7d9ec"
+  },
+  "_from": "git://github.com/alanclarke/node-json2xml.git"
 }
