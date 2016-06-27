@@ -6,8 +6,11 @@ Simple JavaScript Object to XML string converter.
 
 ## Installation
 
-Simplest way to install `json2xml` is to use [npm](http://npmjs.org), just `npm
-install json2xml` which will download json2xml and all dependencies.
+Install via [npm](https://www.npmjs.com/package/json2xml), which will download `json2xml` and all of its dependencies.
+
+```bash
+npm install json2xml
+```
 
 ## Simple usage
 
