@@ -32,7 +32,7 @@ exports['json2xml'] = {
     test.done();
   },
   'opts': function(test) {
-    test.expect(8);
+    test.expect(9);
     test.equal(json2xml({a:''}),'<a/>');
     test.equal(json2xml({a:null}),'<a/>');
     test.equal(json2xml({a:undefined}),'<a/>');
@@ -44,6 +44,8 @@ exports['json2xml'] = {
 
     test.equal(json2xml({a:1}, { header:true }),'<?xml version="1.0" encoding="UTF-8"?><a>1</a>');
     test.equal(json2xml({a:1, attr:{b:2,c:3 }}, { attributes_key:'attr' }), '<a b="2" c="3">1</a>');
+
+    test.equal(json2xml({'underscore_key':1}, { camel_case_elements:true }), '<underscoreKey>1</underscoreKey>');
     test.done();
   }
 

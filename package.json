@@ -44,5 +44,8 @@
   "keywords": [],
   "readme": "node-json2xml\n===========\n\nDescription\n-----------\n\nSimple JavaScript Object to XML string converter.\n\nInstallation\n------------\n\nSimplest way to install `json2xml` is to use [npm](http://npmjs.org), just `npm\ninstall json2xml` which will download json2xml and all dependencies.\n\nSimple usage\n-----------\n    \n    var json2xml = require('json2xml');\n    json2xml({a:1});\n    //<a>1</a>\n\t    \n\nOptions\n-----------\n\n\tadd header:\n\n\tjson2xml({a:1}, { header:true });\n\t//<?xml version=\"1.0\" encoding=\"UTF-8\"?><a>1</a>\n\n\tadd node attributes:\n\n\tjson2xml({a:1, attr:{b:2,c:3 }}, { attributes_key:'attr' });\t\n\t// <a b=\"2\" c=\"3\" >1</a>",
   "_id": "json2xml@0.1.2",
-  "_from": "git://github.com/estheban/node-json2xml.git"
+  "_from": "git://github.com/estheban/node-json2xml.git",
+  "dependencies": {
+    "camelcase": "^3.0.0"
+  }
 }
