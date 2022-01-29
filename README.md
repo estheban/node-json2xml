@@ -22,7 +22,7 @@ var json2xml = require('json2xml');
 
 fs.readFile('data.json', 'utf8', function read (err, data) {
   if (err) console.log(err);
-  fs.writeFile('data.xml', json2xml(JSON.parse(data)));
+  fs.writeFile('data.xml', json2xml(JSON.parse(JSON.stringify(data))));
 });
 ```
 
